@@ -13,6 +13,8 @@ import {
     Badge,
     useColorModeValue,
   } from '@chakra-ui/react';
+import { GoMarkGithub } from 'react-icons/go';
+import {SiLinkedin,SiTwitter,SiInstagram, SiHackerrank} from 'react-icons/si';
   
   export default function ProfileCard() {
     return (
@@ -28,7 +30,7 @@ import {
           rounded={'lg'}
           p={6}
           textAlign={'center'}>
-          <Avatar
+          <Avatar 
             size={'2xl'}
             src={
               'https://kudoabhijeet.com/profile.PNG'
@@ -92,9 +94,27 @@ import {
               #Investing
             </Badge>
           </Stack>
-        
+          <br/>
+          <Text
+            fontSize={'sm '}
+            textAlign={'center'}
+            color={useColorModeValue('gray.700', 'gray.400')}
+            px={3}>
+            {' '}
+            Find me on the internet 👇
+            {' '}
+          </Text> 
+          <Stack mt={8} direction={'row'} spacing={4} align={'center'} justify={'center'}>
+          
+            <a href="http://github.com/kudoabhijeet/"><GoMarkGithub/></a>
+            <a href="https://linkedin.com/in/kudoabhijeet/"><SiLinkedin/></a>
+            <a href="https://instagram.com/kudoabhijeet/"><SiInstagram/></a>
+            <a href="https://twitter.com/kudoabhijeet/"><SiTwitter/></a>
+            <a href="https://www.hackerrank.com/AbhijeetPrasad"><SiHackerrank/></a>
 
+          </Stack>
           <Stack mt={8} direction={'row'} spacing={4}>
+          
             <Button
               flex={1}
               fontSize={'sm'}
@@ -102,8 +122,9 @@ import {
               _focus={{
                 bg: 'gray.200',
               }}>
-              Chat with me 💬
+              Email ✉️
             </Button>
+
             <Button
               flex={1}
               fontSize={'sm'}
@@ -114,12 +135,12 @@ import {
                 '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
               }
               _hover={{
-                bg: 'blue.500',
+                bg: 'blue.600',
               }}
               _focus={{
                 bg: 'blue.500',
               }}>
-              Hire me 💻
+              My Resume 📄
             </Button>
           </Stack>
         </Box>
